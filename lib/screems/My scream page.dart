@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 //agregar un boton debajo del texto otro boton 1 estilo de bordes redondeados
@@ -102,8 +101,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
               onPressed: () {},
-              child: Text("Estilo"),
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+              child: Text("Estilo", selectionColor: Colors.white),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 0, 87, 158),
+              ),
             ),
           ],
         ),
