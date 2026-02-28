@@ -95,7 +95,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(onPressed: () {}, child: Text("1")),
             IconButton(onPressed: () {}, icon: Icon(Icons.add_a_photo)),
-            ElevatedButton(onPressed: () {}, child: Text("Presioname!!!")),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(Icons.access_time),
+              label: Text("Presioname!!!"),
+            ),
             ElevatedButton(
               onPressed: () {},
               child: Text("Estilo"),
