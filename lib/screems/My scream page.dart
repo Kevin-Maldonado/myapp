@@ -1,4 +1,4 @@
-import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 
 //agregar un boton debajo del texto otro boton 1 estilo de bordes redondeados
