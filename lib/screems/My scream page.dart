@@ -93,18 +93,24 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             ElevatedButton(onPressed: () {}, child: Text("1")),
+            SizedBox(height: 20),
             IconButton(onPressed: () {}, icon: Icon(Icons.add_a_photo)),
+            SizedBox(height: 20),
             TextButton.icon(
               onPressed: () {},
               icon: Icon(Icons.access_time),
               label: Text("Presioname!!!"),
             ),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
-              child: Text("Estilo", selectionColor: Colors.white),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color.fromARGB(255, 0, 87, 158),
-              ),
+                  backgroundColor: const Color.fromARGB(255, 0, 87, 158),
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(25),
+                      side: const BorderSide(width: 2))),
+              child: const Text("Estilo"),
             ),
           ],
         ),
