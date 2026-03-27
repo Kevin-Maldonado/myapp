@@ -71,48 +71,69 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            ElevatedButton(onPressed: () {}, child: Text("1")),
-            SizedBox(height: 20),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_a_photo)),
-            SizedBox(height: 20),
-            TextButton.icon(
-              onPressed: () {},
-              icon: Icon(Icons.access_time),
-              label: Text("Presioname!!!"),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            //
+            // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
+            // action in the IDE, or press "p" in the console), to see the
+            // wireframe for each widget.
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Text('You have pushed the button this many times:'),
+              Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              ElevatedButton(onPressed: () {}, child: Text("1")),
+              SizedBox(height: 20),
+              IconButton(onPressed: () {}, icon: Icon(Icons.add_a_photo)),
+              SizedBox(height: 20),
+              TextButton.icon(
+                onPressed: () {},
+                icon: Icon(Icons.access_time),
+                label: Text("Presioname!!!"),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
                   backgroundColor: const Color.fromARGB(255, 0, 87, 158),
                   foregroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                      side: const BorderSide(width: 2))),
-              child: const Text("Estilo"),
-            ),
-          ],
+                    borderRadius: BorderRadius.circular(25),
+                    side: const BorderSide(width: 2),
+                  ),
+                ),
+                child: const Text("Estilo"),
+              ),
+              SizedBox(height: 20),
+              TextField(),
+              SizedBox(height: 20),
+              TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  hintText: 'Escribe tu nombre',
+                  labelText: 'Nombre',
+                  helperText: 'Escribe tu nombre completo',
+                  counterText: '0/20',
+                  icon: Icon(Icons.person),
+                  suffixIcon: Icon(Icons.check_circle),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
